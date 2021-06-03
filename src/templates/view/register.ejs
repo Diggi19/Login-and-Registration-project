@@ -1,41 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="nav-content">
+            <div class="nav-header">
+                <h1>TEST SITE</h1>
+            </div>
+            <div class="nav-itms">
+                <ul class="links">
+                    <li><a href="/"><h3>HOME</h3></a></li>
+                    <li ><a  href="/login"><h3>LOGIN</h3></a></li>
+                    <li class="active"><a href="/register"><h3>REGISTER</h3></a></li>
+                </ul>
+            </div>
+        </div>
 
-<h1>REGISTRATION</h1>
-
-<form action="/register" method="post">
-    <div>
-        <label for="firstname">FIRSTNAME</label>
-        <input type="text" name="firstname" required>
-    </div>
-    <div>
-        <label for="lastname">LASTNAME</label>
-        <input type="text" name="lastname" required>
-    </div>
-    <div>
-        <label for="email">EMAIL</label>
-        <input type="email" name="email" required>
-    </div>
-    <div>
-        <label for="phone">PHONE</label>
-        <input type="text" name="phone" required>
-    </div>
-    <div>
-        <label for="gender">MALE</label>
-        <input type="radio" name="gender" value="male" required>
-    </div>
-    <div>
-        <label for="gender">FEMALE</label>
-        <input type="radio" name="gender" value="female" required>
-    </div>
-    <div>
-        <label for="password">PASSWORD</label>
-        <input type="password" name="password" required>
-    </div>
-    <div>
-        <label for="confirmpassword">CONFIRMPASSWORD</label>
-        <input type="password" name="confirmpassword" required>
-    </div>
-    <div>
-        <button type="submit">submit</button>
     </div>
 
-</form>
+    <div class="main-container">
+        <div class="main-content">
+            
+            <form class="form-register" action="/register" method="post">
+                <div class="label"><label for="firstname">FIRSTNAME</label></div>
+                <div class="inputs">
+                    <input  type="text" name="firstname" required>
+                </div>
+                <div class="label"> <label for="lastname">LASTNAME</label></div>
+                <div class="inputs">
+                    <input  type="text" name="lastname" required>
+                </div>
+                <div class="label"><label for="email">EMAIL</label></div>
+                <div class="inputs">
+                    <input  type="email" name="email" required>
+                </div>
+                <div class="label"><label for="phone">PHONE</label></div>
+                <div class="inputs">
+                    <input   type="text" name="phone" required>
+                </div>
+               
+                <div class="label"> <label for="password">PASSWORD</label></div>
+                <div class="inputs">
+                    <input   type="password" name="password" required>
+                </div>
+                <div class="label"><label for="confirmpassword">CONFIRMPASSWORD</label></div>
+                <div  class="inputs">
+                    <input  type="password" name="confirmpassword" required>
+                </div>
+                <div class="label-gender">
+                    <div class="itm inputs">
+                        <label for="gender">MALE</label>
+                        <input   type="radio" name="gender" value="male" required>
+                    </div>
+                    <div class="itm inputs">
+                        <label for="gender">FEMALE</label>
+                        <input  type="radio" name="gender" value="female" required>
+                    </div>
+               </div>
+                <div  class="btn-cont">
+                    <button class="btn" type="submit">submit</button>
+                </div>
+                    
+            </form>
+            
+        </div>
+
+    </div>
+    <br><br><br><br>
+</body>
+</html>

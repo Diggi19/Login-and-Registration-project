@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: lighter;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*navbar*/
+.navbar-container{
+    width: 100%;
+    height: 150px;
+
+}
+.nav-content{
+    width: 100%;
+    
+    background-color: rgb(83, 83, 218);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-header{
+    width: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: wheat;
+
+}
+.nav-header h1{
+    font-size: 2.5rem;
+    margin-bottom: -.4em;
+}
+.nav-itms{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.links{
+    display: inline-flex;
+}
+.links li{
+    margin:0em .9em 0em .9em;
+}
+.links li:hover{
+    border: none;
+    border-bottom: 2px solid white;
+
+}
+.active{
+    border-bottom: 2px solid white;
+    margin: -.5em;
+
+}
+
+
+/*main form*/
+.main-container{
+    width: 80%;
+    margin: auto;
+    padding-top: 3em;
+    
+    
+}
+.main-content{
+    width: 100%;
+    border: 2px double lightcoral;
+    border-radius: 1em;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background-color:wheat;
+    border-radius: 1em;
+
+}
+.form-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-color:wheat;
+    border-radius: 1em;
+}
+
+.label{
+    font-size: 1.4rem;
+    margin: 1em 0em 1em 0em;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+    margin: .3em;
+}
+.label-gender{
+    display: inline-flex;
+    font-size: 1.4rem;
+    margin: 1em 0em 1em 0em;
+    font-weight: bold;   
+    margin: .3em;
+}
+.label-gender >.itm {
+    margin: 0em .9em 0em .9em;
+    
+}
+.inputs input{
+    margin: .3em;
+    padding: .3em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid lightcoral;
+}
+.inputs input:hover{
+    border: 2.5px solid lightcoral;
+}
+.inputs input:focus{
+    border: 2px solid lightcoral;
+
+}
+
+
+.btn-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    margin: 1em 0em 0em 0em;
+    padding: .5em;
+    width: 40%;
+    border: 1px solid lightcoral;
+}
+.btn:hover{
+    border: 2px solid lightcoral;
+}
+.btn:focus{
+    background: rgb(245, 142, 142);
+}
+
+
+
+
+
+
