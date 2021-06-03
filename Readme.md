@@ -25,3 +25,6 @@ when the user enters his email and password,it will be checked with the data ins
 |bycrypt|for password hashing|
 |validator|for user input validation|
 
+### note
+* home and profile pages are not designed as this project focuses only on handeling login and registration
+

@@ -4,7 +4,7 @@ const app = express()
 const path = require('path')
 require('./db/connect')
 const Register = require('./models/Users')
-
+const bcrypt = require('bcrypt')
 
 // paths
 const static_path = path.join(__dirname,"public")
@@ -33,29 +33,29 @@ app.get('/register',(req,res)=>{
 app.get('/login',(req,res)=>{
     res.render('login')
 })
-
-const name = 'digvesh' 
-app.get('/show',async(req,res)=>{
-    const data = await Register.find({firstname:name})
-    const singled = data.find((user)=>user.firstname === name)
-    console.log(data);
-    console.log(singled);
+app.get('/profile',(req,res)=>{
+    res.render('profile')
 })
+const name = 'digvesh' 
+
 
 //handeling registration
 app.post('/register',async(req,res)=>{
     try {
     
         const password = req.body.password
+        const hashpassword = await bcrypt.hash(password,10)
         const confirmpassword = req.body.confirmpassword
+        const hashconfirmpassword = await bcrypt.hash(confirmpassword,10)
+
         const user = new Register({
             firstname:req.body.firstname,
             lastname:req.body.lastname,
             email:req.body.email,
             phone:req.body.phone,
             gender:req.body.gender,
-            password:req.body.password,
-            confirmpassword:req.body.confirmpassword,
+            password:hashpassword,
+            confirmpassword:hashconfirmpassword,
         })
         if (password === confirmpassword) {
             const result = await user.save()             
@@ -75,16 +75,17 @@ app.post('/register',async(req,res)=>{
 app.post('/login',async(req,res)=>{
      //getting data from page
     const{email,password}=req.body
-
+    
     //getting data from db
     const data = await Register.find({email:email})
     const singled = data.find((user)=>user.email === email)
 
     if (singled) {
-        if (password === singled.password) {
-            res.render('profile')
+        const check = await bcrypt.compare(password,singled.password)
+        if (check) {
+            res.redirect('/profile')
         }else{
-            res.redirect('login',[{name:singled.firstname}])
+            res.redirect('/login')
         }
     }else{
         res.send("login info is incorrect")
